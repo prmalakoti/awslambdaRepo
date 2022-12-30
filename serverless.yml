@@ -1,0 +1,21 @@
+# Happy Coding!
+service: RestApi
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  timeout : 15
+  region: us-east-1
+  memorySize: 2048
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: ANY /{proxy+}
+      - http: ANY /
+    environment:
+      PORT: 3000
+      TOKEN_SECRET: test
