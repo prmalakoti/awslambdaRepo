@@ -5,6 +5,7 @@ var userRoutes = require('./userRoute');
 const middleware = require("./middleware/logger")
 
 app.use(cors());
+app.use(express.json());
 
 app.use('/api/v1', middleware.logger, userRoutes);
 

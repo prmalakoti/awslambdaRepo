@@ -12,7 +12,7 @@ const getToken = async (req, res) => {
 }
 const verifyToken = async (req, res) => {
     try {
-        const token = req.token
+        const token = req.body.token
         let user = jwt.verify(token, process.env.TOKEN_SECRET)
         res.send(user);
     } catch (err) {
