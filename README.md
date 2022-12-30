@@ -10,11 +10,11 @@ Create serverless template
 
 update serverless.yml
 
-### 'npm instll serverless-http'
+### 'npm insatll serverless-http'
 
 Import in handler.js file and module.exports.hello = serverless(app);
 
 add script in package.json 
-### `deploy": "serverless deploy`
+### `"deploy": "serverless deploy"`
 Finally run this command for deploy on server 
 ### `npm run deploy`
